@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marina Technic — УЗВ и инженерные решения для аквакультуры</title>
+  <meta name="description" content="Проектирование, производство и запуск УЗВ-ферм и оборудования: креветка, рак АККР, осётр, форель. Инкубационные модули, фильтрация, озонирование, оксигенация, биофлок. Под ключ и с гарантией результата." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" href="/favicon.svg" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Marina Technic",
+    "url": "https://marinatechnic.com/",
+    "sameAs": ["https://marinatechnic23.tilda.ws/"],
+    "logo": "https://marinatechnic.com/logo.png",
+    "telephone": "+7 707 418 2642",
+    "description": "Производство и запуск УЗВ-ферм и оборудования: креветки, раки, осётр, форель. Инженерные решения под ключ.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KZ",
+      "addressLocality": "Алматы"
+    }
+  }
+  </script>
+</head>
+<body class="bg-white antialiased">
+  <div class="bg-sky-600 text-white text-sm">
+    <div class="container-tight px-4 py-2 flex items-center justify-between gap-3 topbar-stack">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.789 1.106l.94 1.88A2 2 0 0012.72 7H19a2 2 0 012 2v7a2 2 0 01-2 2h-3M3 5l6 12m0 0h8m-8 0l-4-8"/></svg>
+        <span class="text-sm">Проектирование, производство и запуск УЗВ «под ключ»</span>
+      </div>
+      <div class="flex items-center gap-3 topbar-actions">
+        <a class="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-medium tracking-wide uppercase" href="tel:+77074182642">
+          <span>Телефон</span>
+          <span class="font-semibold">+7&nbsp;707&nbsp;418&nbsp;2642</span>
+        </a>
+        <a class="underline decoration-white/40 underline-offset-4 transition hover:decoration-white" href="https://wa.me/77074182642" target="_blank" rel="noopener">Написать в WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 border-b border-black/5 bg-white/85 glass">
+    <div class="container-tight px-4">
+      <div class="flex items-center justify-between gap-6 py-3">
+        <a href="#top" class="flex items-center gap-3 shrink-0" aria-label="Marina Technic">
+          <div class="h-9 w-9 rounded-xl bg-sky-600 text-white grid place-items-center font-extrabold">MT</div>
+          <div class="leading-tight">
+            <div class="font-extrabold tracking-tight text-slate-900">Marina Technic</div>
+            <div class="text-xs text-slate-500">Инженерия для аквакультуры</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+          <a class="hover:text-slate-900 transition" href="#solutions">Решения</a>
+          <a class="hover:text-slate-900 transition" href="#equipment">Оборудование</a>
+          <a class="hover:text-slate-900 transition" href="#process">Как мы работаем</a>
+          <a class="hover:text-slate-900 transition" href="#about">О компании</a>
+          <a class="hover:text-slate-900 transition" href="#contacts">Контакты</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#contact-form" class="hidden md:inline-flex items-center rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold shadow-sm transition hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/30">Связаться</a>
+          <button id="menu" class="md:hidden inline-flex items-center rounded-lg border border-slate-200 px-3 py-2 text-slate-700 transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/15" aria-label="Открыть меню" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile" class="hidden md:hidden pb-4" aria-label="Мобильное меню">
+        <nav class="grid gap-2 text-sm text-slate-700">
+          <a class="rounded-lg px-2 py-2 transition hover:bg-slate-100" href="#solutions">Решения</a>
+          <a class="rounded-lg px-2 py-2 transition hover:bg-slate-100" href="#equipment">Оборудование</a>
+          <a class="rounded-lg px-2 py-2 transition hover:bg-slate-100" href="#process">Как мы работаем</a>
+          <a class="rounded-lg px-2 py-2 transition hover:bg-slate-100" href="#about">О компании</a>
+          <a class="rounded-lg px-2 py-2 transition hover:bg-slate-100" href="#contacts">Контакты</a>
+          <a class="rounded-lg px-2 py-2 font-semibold text-sky-700 transition hover:bg-sky-50" href="#contact-form">Связаться</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="relative overflow-hidden anchor-offset">
+      <div class="hero-grid">
+        <div class="container-tight px-4 pt-16 pb-16 md:pt-24 md:pb-24">
+          <div class="grid gap-12 md:grid-cols-2 md:items-center">
+            <div class="space-y-8">
+              <div class="space-y-4">
+                <span class="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-600 tag-badge">Промышленные УЗВ и аквафермы</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">Инженерные решения для аквакультуры и УЗВ <span class="text-sky-600">под ключ</span></h1>
+                <p class="text-lg text-slate-600">Проектируем, производим и запускаем фермы для выращивания раков, креветки Розенберга и Ваннамей, осетра, форели и других видов. Сроки изготовления — от 30 до 90 дней.</p>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="#contact-form" class="inline-flex items-center rounded-xl bg-sky-600 text-white px-5 py-3 font-semibold shadow-sm transition hover:bg-sky-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-600/40">Получить консультацию</a>
+                <a href="#solutions" class="inline-flex items-center rounded-xl border border-slate-200 px-5 py-3 font-semibold text-slate-900 transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/15">Наши решения</a>
+              </div>
+              <dl class="hero-metrics grid grid-cols-3 gap-4 text-center">
+                <div class="rounded-2xl border border-slate-200 bg-white px-4 py-5 shadow-sm">
+                  <dt>Опыт</dt>
+                  <dd>8+ лет</dd>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white px-4 py-5 shadow-sm">
+                  <dt>Запусков</dt>
+                  <dd>30+ проектов</dd>
+                </div>
+                <div class="rounded-2xl border border-slate-200 bg-white px-4 py-5 shadow-sm">
+                  <dt>Гарантия</dt>
+                  <dd>Результат</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="relative hero-figure">
+              <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft">
+                <img src="hero.jpg" alt="УЗВ-ферма — инженерное решение Marina Technic" class="aspect-[4/3] w-full object-cover" />
+              </div>
+              <p class="mt-3 text-xs text-slate-500">Замените <code>hero.jpg</code> на фото вашей установки (2000×1500&nbsp;px).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="anchor-offset bg-slate-50 py-16 md:py-20">
+      <div class="container-tight px-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">Гарантированное качество — от идеи до запуска</h2>
+        <p class="mt-3 max-w-3xl text-slate-600">Берём ответственность за результат: проектируем, производим, монтируем и обучаем персонал. Адаптируем решения под площадь, климат, бюджет и требуемые объёмы.</p>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="font-semibold text-slate-900">Комплексный подход</div>
+            <div class="mt-2 text-sm text-slate-600">От ТЗ и 3D-проекта до запуска и сопровождения.</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="font-semibold text-slate-900">Гарантия эффективности</div>
+            <div class="mt-2 text-sm text-slate-600">Производительность и качество воды подтверждаем цифрами.</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="font-semibold text-slate-900">Адаптация</div>
+            <div class="mt-2 text-sm text-slate-600">Под конкретные виды и существующую инфраструктуру.</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="font-semibold text-slate-900">Поддержка</div>
+            <div class="mt-2 text-sm text-slate-600">Обучение персонала и техподдержка после запуска.</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="font-semibold text-slate-900">Сроки 30–90 дней</div>
+            <div class="mt-2 text-sm text-slate-600">Собственное производство, чёткий график.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="anchor-offset py-16 md:py-20">
+      <div class="container-tight px-4">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">Готовые решения</h2>
+            <p class="mt-2 text-slate-600">Модули УЗВ, спроектированные под биологию каждого вида.</p>
+          </div>
+          <a href="#contact-form" class="hidden md:inline-flex items-center rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/15">Заказать подбор</a>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition shadow-sm card-hover">
+            <img src="solution-rosenberg.jpg" class="aspect-[4/3] w-full object-cover" alt="УЗВ для креветки Розенберга" />
+            <div class="p-5 space-y-3">
+              <h3 class="text-lg font-semibold text-slate-900">УЗВ для креветки Розенберга</h3>
+              <p class="text-sm text-slate-600">Промышленное решение с высокой плотностью посадки и автоматикой.</p>
+              <div class="flex gap-3">
+                <a href="#contact-form" class="inline-flex rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-sky-500">Рассчитать</a>
+                <a href="solutions/rosenberg.html" class="inline-flex rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition shadow-sm card-hover">
+            <img src="solution-vannamei.jpg" class="aspect-[4/3] w-full object-cover" alt="УЗВ для креветки Ваннамей" />
+            <div class="p-5 space-y-3">
+              <h3 class="text-lg font-semibold text-slate-900">УЗВ для креветки Ваннамей</h3>
+              <p class="text-sm text-slate-600">Регулируем солёность и держим стабильные параметры воды.</p>
+              <div class="flex gap-3">
+                <a href="#contact-form" class="inline-flex rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-sky-500">Рассчитать</a>
+                <a href="solutions/vannamei.html" class="inline-flex rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition shadow-sm card-hover">
+            <img src="solution-sturgeon.jpg" class="aspect-[4/3] w-full object-cover" alt="УЗВ для осетра / форели / клариевого сома" />
+            <div class="p-5 space-y-3">
+              <h3 class="text-lg font-semibold text-slate-900">УЗВ для осетра, форели, клариевого сома</h3>
+              <p class="text-sm text-slate-600">Универсальные модули для рыбы с замкнутым циклом выращивания.</p>
+              <div class="flex gap-3">
+                <a href="#contact-form" class="inline-flex rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-sky-500">Рассчитать</a>
+                <a href="solutions/sturgeon.html" class="inline-flex rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">Подробнее</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition shadow-sm card-hover">
+            <img src="solution-akkkr.jpg" class="aspect-[4/3] w-full object-cover" alt="УЗВ для рака АККР" />
+            <div class="p-5 space-y-3">
+              <h3 class="text-lg font-semibold text-slate-900">УЗВ для рака АККР</h3>
+              <p class="text-sm text-slate-600">Система откорма с контролем температуры и качества воды.</p>
+              <div class="flex gap-3">
+                <a href="#contact-form" class="inline-flex rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-sky-500">Рассчитать</a>
+                <a href="solutions/akkr.html" class="inline-flex rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">Подробнее</a>
+              </div>
+            </div>
+          </article>
+          <article class="rounded-2xl border border-dashed border-slate-300 p-6 text-center text-slate-400">
+            <div class="font-semibold text-slate-500">Добавить решение</div>
+            <div class="mt-2 text-sm">Например, «морской гидробиом»</div>
+          </article>
+          <article class="rounded-2xl border border-dashed border-slate-300 p-6 text-center text-slate-400">
+            <div class="font-semibold text-slate-500">Добавить решение</div>
+            <div class="mt-2 text-sm">Например, «аэрационно-напорный реактор»</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipment" class="anchor-offset bg-slate-50 py-16 md:py-20">
+      <div class="container-tight px-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">Оборудование, которое мы производим</h2>
+        <p class="mt-2 text-slate-600">Ключевые элементы УЗВ: инкубация, фильтрация, дезинфекция и насыщение.</p>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-900">Инкубация и разведение</h3>
+            <ul class="mt-3 space-y-2 list-disc pl-4 text-sm text-slate-600">
+              <li>Инкубационный модуль для ракообразных</li>
+              <li>Инкубационный модуль для креветки Розенберга и Ваннамей</li>
+              <li>Инкубатор для креветки и цист артемии</li>
+              <li>Инкубатор икры осетровых видов</li>
+            </ul>
+            <a href="#contact-form" class="mt-4 inline-flex rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">Получить спецификацию</a>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-900">Фильтрация и очистка воды</h3>
+            <ul class="mt-3 space-y-2 list-disc pl-4 text-sm text-slate-600">
+              <li>Барабанный фильтр</li>
+              <li>Биофильтр для УЗВ</li>
+              <li>Белковый фильтр</li>
+              <li>Денитрификатор</li>
+              <li>Комбинированный фильтр</li>
+              <li>Орошаемый струйный биофильтр</li>
+            </ul>
+            <a href="#contact-form" class="mt-4 inline-flex rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">Получить спецификацию</a>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-900">Дезинфекция и насыщение</h3>
+            <ul class="mt-3 space-y-2 list-disc pl-4 text-sm text-slate-600">
+              <li>Промышленный озонатор</li>
+              <li>Оксигенатор</li>
+              <li>УФ-стерилизатор</li>
+            </ul>
+            <a href="#contact-form" class="mt-4 inline-flex rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">Получить спецификацию</a>
+          </div>
+        </div>
+
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-900">Специальные технологии</h3>
+            <ul class="mt-3 space-y-2 list-disc pl-4 text-sm text-slate-600">
+              <li>Технология биофлок</li>
+              <li>Аэрационно-напорный реактор</li>
+              <li>Морской гидробиом</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-900">Ёмкости и инфраструктура</h3>
+            <ul class="mt-3 space-y-2 list-disc pl-4 text-sm text-slate-600">
+              <li>Бассейны для УЗВ</li>
+              <li>Трубопроводы, запорная арматура, шасси</li>
+              <li>Щиты управления и автоматика</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="anchor-offset py-16 md:py-20">
+      <div class="container-tight px-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">Полный цикл — прозрачно и по срокам</h2>
+        <ol class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="text-xs uppercase tracking-wide text-slate-500">Шаг 1</div>
+            <div class="mt-2 font-semibold text-slate-900">Заявка и консультация</div>
+            <p class="mt-2 text-sm text-slate-600">Определяем цель, вид, объёмы. Предварительный расчёт мощности.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="text-xs uppercase tracking-wide text-slate-500">Шаг 2</div>
+            <div class="mt-2 font-semibold text-slate-900">Проектирование</div>
+            <p class="mt-2 text-sm text-slate-600">3D-модель, гидравлика, баланс азота, спецификации, график.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="text-xs uppercase tracking-wide text-slate-500">Шаг 3</div>
+            <div class="mt-2 font-semibold text-slate-900">Производство</div>
+            <p class="mt-2 text-sm text-slate-600">Собственное изготовление узлов. Контроль качества по чек-листам.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="text-xs uppercase tracking-wide text-slate-500">Шаг 4</div>
+            <div class="mt-2 font-semibold text-slate-900">Монтаж и пуско-наладка</div>
+            <p class="mt-2 text-sm text-slate-600">Инсталляция, запуск, калибровка параметров, обучение персонала.</p>
+          </li>
+          <li class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="text-xs uppercase tracking-wide text-slate-500">Шаг 5</div>
+            <div class="mt-2 font-semibold text-slate-900">Сопровождение</div>
+            <p class="mt-2 text-sm text-slate-600">Техподдержка, регламент сервисов, расширение мощностей.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="about" class="anchor-offset bg-slate-50 py-16 md:py-20">
+      <div class="container-tight px-4 grid gap-12 md:grid-cols-2 md:items-center">
+        <div class="space-y-4">
+          <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">О компании</h2>
+          <p class="text-slate-600">Marina Technic — инженерная команда, которая делает не «оборудование ради оборудования», а рабочие фермы. Мы берёмся за сложные задачи, предлагаем понятные расчёты и отвечаем за результат. Все системы масштабируются по мере роста вашего бизнеса.</p>
+          <ul class="grid grid-cols-2 gap-3 text-sm">
+            <li class="rounded-xl border border-slate-200 bg-white p-3 text-slate-900">Опыт 8+ лет</li>
+            <li class="rounded-xl border border-slate-200 bg-white p-3 text-slate-900">30+ реализованных проектов</li>
+            <li class="rounded-xl border border-slate-200 bg-white p-3 text-slate-900">Сроки 30–90 дней</li>
+            <li class="rounded-xl border border-slate-200 bg-white p-3 text-slate-900">Поддержка после запуска</li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-tr from-sky-200/70 via-transparent to-transparent blur-2xl"></div>
+          <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft">
+            <img src="about.jpg" alt="Производство и сборка оборудования УЗВ" class="aspect-[4/3] w-full object-cover" />
+          </div>
+          <p class="mt-3 text-xs text-slate-500">Замените <code>about.jpg</code> на фото производства или монтажа.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="anchor-offset py-16 md:py-20">
+      <div class="container-tight px-4">
+        <div class="grid gap-10 md:grid-cols-2 md:items-start">
+          <div class="space-y-4">
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900">Давайте обсудим вашу ферму</h2>
+            <p class="text-slate-600">Оставьте контакты и кратко опишите задачу: вид, желаемые объёмы, площадь помещения, бюджет. Мы предложим оптимальную конфигурацию и сроки.</p>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50/60 p-6">
+              <div class="text-sm text-slate-500">Телефон</div>
+              <a class="text-lg font-semibold text-slate-900" href="tel:+77074182642">+7 707 418 2642</a>
+              <div class="mt-4 text-sm text-slate-500">Почта</div>
+              <a class="font-semibold text-slate-900" href="mailto:info@marinatechnic.com">info@marinatechnic.com</a>
+              <div class="mt-4 text-sm text-slate-500">Мессенджер</div>
+              <a class="font-semibold text-slate-900" href="https://wa.me/77074182642" target="_blank" rel="noopener">WhatsApp: написать</a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft" action="https://formsubmit.co/youremail@example.com" method="POST">
+            <input type="hidden" name="_subject" value="Новая заявка с сайта Marina Technic" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <div class="grid gap-4">
+              <div>
+                <label class="block text-sm font-medium text-slate-700" for="name">Имя</label>
+                <input id="name" name="name" required class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-500/40" placeholder="Как к вам обращаться?" />
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div>
+                  <label class="block text-sm font-medium text-slate-700" for="phone">Телефон</label>
+                  <input id="phone" name="phone" required class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-500/40" placeholder="+7 xxx xxx xx xx" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-700" for="email">E‑mail</label>
+                  <input id="email" name="email" type="email" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-500/40" placeholder="name@company.kz" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700" for="message">Задача</label>
+                <textarea id="message" name="message" rows="4" class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-500/40" placeholder="Вид, объёмы, площадь, бюджет"></textarea>
+              </div>
+              <button class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/30">Отправить заявку</button>
+              <p class="text-xs text-slate-500">Нажимая «Отправить», вы соглашаетесь с обработкой персональных данных.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 py-10">
+    <div class="container-tight px-4">
+      <div class="grid gap-8 md:grid-cols-3 md:items-start">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="h-9 w-9 rounded-xl bg-sky-600 text-white grid place-items-center font-extrabold">MT</div>
+            <div class="font-extrabold tracking-tight text-slate-900">Marina Technic</div>
+          </div>
+          <p class="text-sm text-slate-600 max-w-sm">Инженерные решения для аквакультуры и УЗВ. Производство и запуск модулей, фильтрации, озонирования и оксигенации.</p>
+        </div>
+        <div>
+          <div class="font-semibold text-slate-900">Навигация</div>
+          <ul class="footer-list mt-3 space-y-2 text-sm text-slate-600">
+            <li><a class="transition hover:text-slate-900" href="#solutions">Решения</a></li>
+            <li><a class="transition hover:text-slate-900" href="#equipment">Оборудование</a></li>
+            <li><a class="transition hover:text-slate-900" href="#process">Как мы работаем</a></li>
+            <li><a class="transition hover:text-slate-900" href="#about">О компании</a></li>
+            <li><a class="transition hover:text-slate-900" href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold text-slate-900">Контакты</div>
+          <ul class="footer-list mt-3 space-y-2 text-sm text-slate-600">
+            <li>Тел.: <a class="transition hover:text-slate-900" href="tel:+77074182642">+7 707 418 2642</a></li>
+            <li>WhatsApp: <a class="transition hover:text-slate-900" href="https://wa.me/77074182642" target="_blank" rel="noopener">написать</a></li>
+            <li>E‑mail: <a class="transition hover:text-slate-900" href="mailto:info@marinatechnic.com">info@marinatechnic.com</a></li>
+            <li class="text-slate-400">Алматы, Казахстан</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-xs text-slate-400">© 2025 Marina Technic. Все права защищены.</div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu');
+    const panel = document.getElementById('mobile');
+    if (btn && panel) {
+      btn.addEventListener('click', () => {
+        const isHidden = panel.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isHidden));
+      });
+      panel.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          panel.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
