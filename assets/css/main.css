@@ -476,6 +476,225 @@ body.modal-open {
   text-align: center;
 }
 
+
+.equipment-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.equipment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 1.6rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background:
+    linear-gradient(160deg, rgba(14, 165, 233, 0.08), transparent 65%),
+    #ffffff;
+  padding: 1.75rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  min-height: 100%;
+}
+
+.equipment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 56px rgba(15, 23, 42, 0.12);
+}
+
+.equipment-icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.equipment-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.equipment-card p {
+  font-size: 0.95rem;
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.equipment-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.equipment-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgba(15, 23, 42, 0.75);
+  font-size: 0.9rem;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.equipment-links a::before {
+  content: '•';
+  color: currentColor;
+  opacity: 0.5;
+}
+
+.equipment-links a:hover,
+.equipment-links a:focus-visible {
+  color: #0f172a;
+  transform: translateX(2px);
+  outline: none;
+}
+
+.equipment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border-radius: 0.875rem;
+  padding: 0.75rem 1.2rem;
+  font-size: 0.95rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.95), rgba(56, 189, 248, 0.85));
+  color: #fff;
+  box-shadow: 0 14px 32px rgba(14, 165, 233, 0.22);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(14, 165, 233, 0.26);
+  outline: none;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: rgba(15, 23, 42, 0.05);
+  border-color: rgba(14, 165, 233, 0.3);
+  color: #0f172a;
+  outline: none;
+}
+
+.equipment-accordion {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.equipment-item {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.equipment-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.3rem 1.6rem;
+  font-weight: 600;
+  color: #0f172a;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.equipment-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.equipment-item summary:hover,
+.equipment-item summary:focus-visible {
+  background: rgba(14, 165, 233, 0.08);
+  outline: none;
+}
+
+.equipment-item summary::after {
+  content: '▾';
+  font-size: 1rem;
+  color: rgba(15, 23, 42, 0.45);
+  transition: transform 0.2s ease;
+}
+
+.equipment-item[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.equipment-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.equipment-panel {
+  padding: 0 1.6rem 1.6rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.equipment-panel p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.equipment-panel .equipment-links {
+  gap: 0.45rem;
+}
+
+.equipment-panel .equipment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+  .equipment-grid {
+    display: none;
+  }
+
+  .equipment-accordion {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .equipment-panel {
+    padding: 0 1.2rem 1.2rem;
+  }
+}
+
 .muted-border {
   border-color: var(--border);
 }
@@ -531,4 +750,3 @@ body.modal-open {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
