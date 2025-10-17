@@ -193,6 +193,8 @@ function initHeaderInteractions() {
 
   initDropdowns();
   initMobileMenu();
+  initContactModal();
+  initEquipmentTabs();
 }
 
 document.addEventListener('click', (event) => {
@@ -217,3 +219,195 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
   loadIncludes();
 });
+
+let contactModalOverlay = null;
+let contactModalDialog = null;
+let contactModalPreviousFocus = null;
+let contactModalFocusable = [];
+
+function injectContactModal() {
+  if (document.getElementById('contact-modal')) {
+    contactModalOverlay = document.getElementById('contact-modal');
+    contactModalDialog = contactModalOverlay.querySelector('[data-modal-dialog]');
+    return;
+  }
+
+  const markup = `
+    <div id="contact-modal" class="modal-overlay" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" data-modal-dialog tabindex="-1">
+        <button type="button" class="modal-close" aria-label="Закрыть" data-modal-close>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="18" height="18">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M6.75 6.75l10.5 10.5M17.25 6.75l-10.5 10.5"/>
+          </svg>
+        </button>
+        <div class="modal-header">
+          <h2 id="contact-modal-title" class="modal-title">Оставьте заявку</h2>
+          <p class="modal-subtitle">Перезвоним, уточним задачу и предложим конфигурацию оборудования.</p>
+        </div>
+        <form class="modal-form space-y-4" action="https://formsubmit.co/youremail@example.com" method="POST">
+          <input type="hidden" name="_subject" value="Запрос с попапа Marine Technology" />
+          <input type="hidden" name="_captcha" value="false" />
+          <div class="form-field">
+            <label for="popup-name">Имя</label>
+            <input id="popup-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться?" required />
+          </div>
+          <div class="form-field">
+            <label for="popup-phone">Телефон</label>
+            <input id="popup-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 ___ ___ __ __" required />
+          </div>
+          <button type="submit">Отправить заявку</button>
+          <p class="modal-footnote">Нажимая «Отправить заявку», вы соглашаетесь с обработкой персональных данных.</p>
+        </form>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML('beforeend', markup);
+  contactModalOverlay = document.getElementById('contact-modal');
+  contactModalDialog = contactModalOverlay.querySelector('[data-modal-dialog]');
+}
+
+function openContactModal() {
+  if (!contactModalOverlay || !contactModalDialog) {
+    return;
+  }
+  contactModalPreviousFocus = document.activeElement;
+  contactModalOverlay.classList.add('active');
+  contactModalOverlay.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+
+  contactModalFocusable = Array.from(contactModalDialog.querySelectorAll('a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'))
+    .filter((el) => !el.hasAttribute('disabled'));
+
+  const firstInput = contactModalDialog.querySelector('input');
+  (firstInput || contactModalDialog).focus({ preventScroll: true });
+
+  contactModalOverlay.addEventListener('keydown', trapContactModalFocus);
+}
+
+function closeContactModal() {
+  if (!contactModalOverlay || !contactModalDialog) {
+    return;
+  }
+  contactModalOverlay.classList.remove('active');
+  contactModalOverlay.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+
+  contactModalOverlay.removeEventListener('keydown', trapContactModalFocus);
+
+  if (contactModalPreviousFocus && typeof contactModalPreviousFocus.focus === 'function') {
+    contactModalPreviousFocus.focus({ preventScroll: true });
+  }
+}
+
+function trapContactModalFocus(event) {
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    closeContactModal();
+    return;
+  }
+
+  if (event.key !== 'Tab' || contactModalFocusable.length === 0) {
+    return;
+  }
+
+  const first = contactModalFocusable[0];
+  const last = contactModalFocusable[contactModalFocusable.length - 1];
+
+  if (event.shiftKey) {
+    if (document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    }
+  } else if (document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+function initContactModal() {
+  injectContactModal();
+  if (!contactModalOverlay || !contactModalDialog) return;
+
+  const closeButtons = contactModalOverlay.querySelectorAll('[data-modal-close]');
+  closeButtons.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      closeContactModal();
+    });
+  });
+
+  contactModalOverlay.addEventListener('click', (event) => {
+    if (event.target === contactModalOverlay) {
+      closeContactModal();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href) return;
+    if (href.includes('#contact-form')) {
+      const targetAttr = link.getAttribute('target');
+      if (!targetAttr || targetAttr === '_self') {
+        event.preventDefault();
+        openContactModal();
+      }
+    }
+  });
+}
+
+function initEquipmentTabs() {
+  const container = document.querySelector('#equipment');
+  if (!container) return;
+
+  const tabs = Array.from(container.querySelectorAll('.equipment-tab'));
+  const panels = Array.from(container.querySelectorAll('.equipment-panel'));
+
+  if (!tabs.length || !panels.length) return;
+
+  const activate = (targetId) => {
+    panels.forEach((panel) => {
+      panel.classList.toggle('active', panel.id === targetId);
+    });
+    tabs.forEach((tab) => {
+      const isTarget = tab.dataset.target === targetId;
+      tab.classList.toggle('active', isTarget);
+      tab.setAttribute('aria-selected', String(isTarget));
+    });
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      activate(tab.dataset.target);
+    });
+    tab.addEventListener('keydown', (event) => {
+      const index = tabs.indexOf(tab);
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        tabs[(index + 1) % tabs.length]?.focus();
+      }
+      if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        tabs[(index - 1 + tabs.length) % tabs.length]?.focus();
+      }
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        activate(tab.dataset.target);
+      }
+    });
+  });
+
+  const observer = window.matchMedia('(max-width: 768px)');
+  const handleBreakpoint = (event) => {
+    if (event.matches) {
+      panels.forEach((panel) => panel.classList.add('active'));
+    } else {
+      activate(tabs.find((tab) => tab.classList.contains('active'))?.dataset.target || tabs[0].dataset.target);
+    }
+  };
+
+  observer.addEventListener ? observer.addEventListener('change', handleBreakpoint) : observer.addListener(handleBreakpoint);
+  handleBreakpoint(observer);
+}
